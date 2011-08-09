@@ -33,10 +33,6 @@ class Scout::Server < Hashie::Mash
   attr_reader :metrics
   
   def initialize(hash) #:nodoc:
-    if hash['active_alerts']
-      @alert_hash = hash['active_alerts']
-      hash.delete('active_alerts')
-    end
     @metrics = Scout::MetricProxy.new(self)
     super(hash)
   end
@@ -142,13 +138,6 @@ class Scout::Server < Hashie::Mash
     else
       return true
     end
-  end
-
-  # Active alerts for this server
-  #
-  # @return [Array] An array of {Scout::Alert} objects
-  def active_alerts
-    @active_alerts ||= @alert_hash.map { |a| decorate_with_server(Scout::Alert.new(a)) }
   end
 
   # Recent alerts for this server

@@ -25,8 +25,6 @@ class ServerTest < Test::Unit::TestCase
     servers = Scout::Server.all
     assert_equal 2, servers.size
     assert servers.first.is_a?(Scout::Server)
-    assert servers.last.active_alerts.first.is_a?(Scout::Alert)
-    assert servers.last.active_alerts.first.title =~ /Passenger/
   end
   
   def test_plugin

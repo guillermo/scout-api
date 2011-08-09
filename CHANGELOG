@@ -14,3 +14,7 @@ Initial release.
 == 1.0.1
 
 * Removed debugging output in Metric#to_sparkline
+
+== Master
+
+* Removed Server#active_alerts. This XML is not being returned.
