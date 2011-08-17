@@ -3,17 +3,18 @@ require 'hashie'
 require 'httparty'
 require 'nokogiri'
 require 'cgi'
-require 'scout_api/version'
-require 'scout_api/account'
-require 'scout_api/server'
-require 'scout_api/plugin'
-require 'scout_api/trigger'
-require 'scout_api/alert'
-require 'scout_api/group.rb'
-require 'scout_api/metric.rb'
-require 'scout_api/person'
-require 'scout_api/metric_proxy'
-require 'scout_api/metric_calculation'
+require File.expand_path('../scout_api/version.rb', __FILE__)
+require File.expand_path('../scout_api/account.rb', __FILE__)
+require File.expand_path('../scout_api/server.rb', __FILE__)
+require File.expand_path('../scout_api/plugin.rb', __FILE__)
+require File.expand_path('../scout_api/trigger.rb', __FILE__)
+require File.expand_path('../scout_api/alert.rb', __FILE__)
+require File.expand_path('../scout_api/group.rb', __FILE__)
+require File.expand_path('../scout_api/metric.rb', __FILE__)
+require File.expand_path('../scout_api/person.rb', __FILE__)
+require File.expand_path('../scout_api/metric_proxy.rb', __FILE__)
+require File.expand_path('../scout_api/metric_calculation.rb', __FILE__)
+
 
 
 module Scout

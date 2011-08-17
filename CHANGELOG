@@ -18,3 +18,4 @@ Initial release.
 == Master
 
 * Removed Server#active_alerts. This XML is not being returned.
+* Changed require calls to relative paths
